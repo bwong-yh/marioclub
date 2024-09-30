@@ -59,11 +59,10 @@ header h1 {
   background-color: #f4f4f4;
   padding: 28px;
   top: 90px;
-}
-.main-nav ul {
-  margin: 0 auto;
-  white-space: nowrap;
-  max-width: 1200px;
+  z-index: 1, ul;
+  z-index-margin: 0 auto;
+  z-index-white-space: nowrap;
+  z-index-max-width: 1200px;
 }
 .main-nav ul li {
   display: inline-block;
@@ -136,6 +135,16 @@ footer {
   text-align: center;
 }
 
+p::-moz-selection {
+  background-color: #f63232;
+  color: #ffffff;
+}
+
+p::selection {
+  background-color: #f63232;
+  color: #ffffff;
+}
+
 nav li a:hover {
   text-decoration: underline;
 }
@@ -143,6 +152,7 @@ nav li a:hover {
 .images li:hover {
   position: relative;
   top: -4px;
+  z-index: -1;
 }
 
 section.join form input[type=email]:focus {

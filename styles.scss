@@ -73,6 +73,7 @@ header {
     background-color: $background-color-gray;
     padding: 28px;
     top: 90px;
+    z-index: 1,
 
     ul {
         margin: 0 auto;
@@ -167,6 +168,11 @@ footer {
 }
 
 // pseudo classes
+p::selection {
+    background-color: $background-color-red;
+    color: #ffffff;
+}
+
 nav li a:hover {
     text-decoration: underline;
 }
@@ -174,6 +180,7 @@ nav li a:hover {
 .images li:hover {
     position: relative;
     top: -4px;
+    z-index: -1;
 }
 
 section.join form input {
